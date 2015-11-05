@@ -90,8 +90,8 @@ function addCustomSidebar($skin, &$sidebar)
 		else
 		{
 			// get article and content
-			$article = new Article($title);
-			$content = $article->getContent();
+			$article = new WikiPage($title);
+			$content = $article->getText();
 
 			// parse wikitext
 			$parserOutput = $wgParser->parse($content, $title, $parserOptions);
