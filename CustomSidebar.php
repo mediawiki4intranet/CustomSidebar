@@ -59,7 +59,7 @@ function addCustomSidebar($skin, &$sidebar)
 	if (wfMessage( 'CustomSidebar' )->inContentLanguage()->isBlank())
 		return true;
 
-	$text = wfMsg('CustomSidebar');
+	$text = wfMessage( 'CustomSidebar' )->text();
 	$text = trim(preg_replace(array('/<!--(.*)-->/s'), array(''), $text));
 	$blocks = explode("\n", $text);
 
