@@ -56,7 +56,7 @@ function addCustomSidebar($skin, &$sidebar)
 
 	$parserOptions = new ParserOptions();
 
-	if (wfEmptyMsg('CustomSidebar'))
+	if (wfMessage( 'CustomSidebar' )->inContentLanguage()->isBlank())
 		return true;
 
 	$text = wfMsg('CustomSidebar');
